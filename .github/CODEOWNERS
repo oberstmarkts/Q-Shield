@@ -1,0 +1,15 @@
+# Q-Shield code ownership
+
+# Default owner for all files
+* @oberstmarkts
+
+# GitHub security and automation configuration
+.github/ @oberstmarkts
+
+# Security policy and governance documents
+SECURITY.md @oberstmarkts
+docs/ @oberstmarkts
+
+# Project documentation
+README.md @oberstmarkts
+CONTRIBUTING.md @oberstmarkts
