@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q-Shield AI Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Q-Day Crypto Asset Readiness</p>
+      <h1>Q-Shield AI</h1>
+      <p class="subtitle">TLS/인증서 기반 암호자산 위험평가와 PQC 전환 권고를 자동 생성합니다.</p>
+      <div class="hero-actions">
+        <button id="runSample" class="primary">샘플 분석 실행</button>
+        <a class="secondary" href="/download/csv">CSV 다운로드</a>
+        <a class="secondary" href="/download/report">Report 다운로드</a>
+        <a class="secondary" href="/download/manifest">Evidence Manifest</a>
+      </div>
+    </div>
+    <div class="guardrail">
+      <strong>운영 원칙</strong>
+      <span>허가 자산만 스캔</span>
+      <span>민감정보 저장 금지</span>
+      <span>Fail-Closed</span>
+      <span>Owner: token_24</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel upload-panel">
+      <div>
+        <h2>CSV 업로드 분석</h2>
+        <p>필수 컬럼: asset_id, hostname, port, exposure, data_sensitivity, business_criticality, legacy_flag, owner_token</p>
+      </div>
+      <form id="uploadForm">
+        <input type="file" name="asset_csv" accept=".csv" required>
+        <button type="submit">업로드 분석</button>
+      </form>
+    </section>
+
+    <section class="kpi-grid">
+      <article class="kpi-card">
+        <span>전체 자산</span>
+        <strong id="totalAssets">-</strong>
+      </article>
+      <article class="kpi-card">
+        <span>Critical/High</span>
+        <strong id="criticalHigh">-</strong>
+      </article>
+      <article class="kpi-card">
+        <span>평균 Q-Risk</span>
+        <strong id="avgScore">-</strong>
+      </article>
+      <article class="kpi-card">
+        <span>최고 위험 자산</span>
+        <strong id="topAsset">-</strong>
+      </article>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel">
+        <h2>위험등급 분포</h2>
+        <div id="levelChart" class="bar-chart"></div>
+      </article>
+      <article class="panel">
+        <h2>공개키 알고리즘 분포</h2>
+        <div id="algorithmChart" class="bar-chart"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div>
+          <h2>Top Risk Assets</h2>
+          <p>점수 상위 자산부터 정렬됩니다. 행을 클릭하면 권고문을 확인할 수 있습니다.</p>
+        </div>
+        <span id="statusBadge" class="badge">대기 중</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Asset</th>
+              <th>Hostname</th>
+              <th>Score</th>
+              <th>Level</th>
+              <th>Algorithm</th>
+              <th>Exposure</th>
+              <th>Due</th>
+            </tr>
+          </thead>
+          <tbody id="assetTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel detail-panel">
+      <h2>선택 자산 상세 권고</h2>
+      <div id="assetDetail" class="detail-empty">자산 행을 선택하거나 샘플 분석을 실행하세요.</div>
+    </section>
+  </main>
+
+  <footer>
+    Q-Shield AI MVP · Python Flask HTML Dashboard · Evidence-first final project
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

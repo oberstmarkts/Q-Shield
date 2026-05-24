@@ -1,0 +1,4 @@
+cryptography>=42.0.0
+pandas>=2.0.0
+streamlit>=1.30.0
+pytest>=8.0.0

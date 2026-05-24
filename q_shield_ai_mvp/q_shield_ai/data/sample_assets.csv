@@ -1,0 +1,6 @@
+asset_id,hostname,port,environment,exposure,business_criticality,data_sensitivity,owner_token,legacy_flag
+A001,example.com,443,prod,external,high,high,token_24,false
+A002,www.google.com,443,prod,external,high,medium,token_24,false
+A003,localhost,443,dev,internal,medium,low,token_24,true
+A004,expired.badssl.com,443,test,external,medium,medium,token_24,true
+A005,sha256.badssl.com,443,test,external,low,low,token_24,false

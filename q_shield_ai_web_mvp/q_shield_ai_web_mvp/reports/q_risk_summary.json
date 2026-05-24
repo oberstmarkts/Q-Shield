@@ -1,0 +1,10 @@
+{
+  "total_assets": 4,
+  "average_score": 60.75,
+  "risk_distribution": {
+    "Critical": 1,
+    "High": 1,
+    "Medium": 1,
+    "Low": 1
+  }
+}

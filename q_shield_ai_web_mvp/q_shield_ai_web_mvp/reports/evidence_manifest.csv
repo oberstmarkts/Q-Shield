@@ -1,0 +1,4 @@
+﻿EvidenceID,PointerID,File,Hash,Owner,TTL,DoD
+EVID-QSHIELD-Q_RISK_RESULTS,SRC-05,reports/q_risk_results.csv,sha256:3bac1e989ed576e92b72a5227240aeb3d66f562e811af3516a8c28833a502298,token_24,90d,file exists and hash calculated
+EVID-QSHIELD-Q_SHIELD_REPORT,SRC-05,reports/q_shield_report.md,sha256:7e85230b01e8bc1c7a3361ea1937f87b64b55829502ae1c724745a1928275387,token_24,90d,file exists and hash calculated
+EVID-QSHIELD-Q_RISK_SUMMARY,SRC-05,reports/q_risk_summary.json,sha256:a0c02154b56e10d2c92211449794047f837d5b39c83db86dc4cbacb45b404ca7,token_24,90d,file exists and hash calculated

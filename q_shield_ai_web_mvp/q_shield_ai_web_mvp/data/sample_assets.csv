@@ -1,0 +1,5 @@
+asset_id,hostname,port,exposure,data_sensitivity,business_criticality,legacy_flag,owner_token,allowed_to_scan
+A001,backup.example.local,443,external,high,high,true,token_24_SEC,false
+A002,login.example.local,443,external,medium,high,false,token_24_DEV,false
+A003,api.example.local,443,internal,medium,medium,false,token_24_DEV,false
+A004,static.example.local,443,external,low,low,false,token_24_PM,false
