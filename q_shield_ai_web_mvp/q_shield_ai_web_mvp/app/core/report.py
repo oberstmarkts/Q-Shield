@@ -76,12 +76,12 @@ def generate_markdown_report(results: list[RiskResult], output_path: str | Path 
         ])
 
     lines.extend([
-        "## Operating Guardrails",
+        "## 운영 원칙",
         "",
-        "- Scan only owned or explicitly authorized assets.",
-        "- Do not store real secrets, API keys, private keys, or personal data.",
-        "- Use offline sample data for stable presentations.",
-        "- If sensitive data is found, stop report publication and rerun after remediation.",
+        "- 소유하거나 명시적으로 승인된 자산만 스캔합니다.",
+        "- 실제 비밀값, API 키, 개인 키, 개인정보를 저장하지 않습니다.",
+        "- 안정적인 시연을 위해 오프라인 샘플 데이터를 사용합니다.",
+        "- 민감 데이터가 발견되면 보고서 게시를 중단하고 조치 후 다시 실행합니다.",
         "",
     ])
 

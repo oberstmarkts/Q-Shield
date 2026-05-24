@@ -226,11 +226,24 @@ h2 {
   font-size: .9rem;
 }
 
+.upload-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  align-items: flex-start;
+}
+
 .upload-form {
   display: flex;
   gap: .65rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
 }
 
 input[type="file"] {

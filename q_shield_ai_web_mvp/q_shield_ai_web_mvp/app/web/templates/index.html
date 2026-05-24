@@ -3,59 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Q-Shield AI Dashboard</title>
+  <title>Q-Shield AI 대시보드</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <header class="hero">
-    <div>
-      <p class="eyebrow">Q-Day Crypto Asset Readiness</p>
+    <div class="hero-intro">
+      <p class="eyebrow">Q-Day 암호자산 대응 준비도</p>
       <h1>Q-Shield AI</h1>
-      <p class="subtitle">TLS/인증서 기반 암호자산 위험평가와 PQC 전환 권고를 자동 생성합니다.</p>
+      <p class="subtitle">TLS/인증서 기반 암호자산 위험을 평가하고 양자내성암호(PQC) 전환 권고를 자동으로 생성합니다.</p>
       <div class="hero-actions">
-        <button id="runSample" class="primary">샘플 분석 실행</button>
-        <a class="secondary" href="/download/csv">CSV 다운로드</a>
-        <a class="secondary" href="/download/report">Report 다운로드</a>
-        <a class="secondary" href="/download/manifest">Evidence Manifest</a>
+        <button id="runSample" type="button" class="btn primary">샘플 분석 실행</button>
       </div>
     </div>
-    <div class="guardrail">
+    <aside class="guardrail">
       <strong>운영 원칙</strong>
-      <span>허가 자산만 스캔</span>
+      <span>허가된 자산만 스캔</span>
       <span>민감정보 저장 금지</span>
-      <span>Fail-Closed</span>
-      <span>Owner: token_24</span>
-    </div>
+      <span>Fail-Closed 기본 동작</span>
+      <span class="mono">소유자: token_24</span>
+    </aside>
   </header>
 
   <main>
     <section class="panel upload-panel">
-      <div>
+      <div class="upload-info">
         <h2>CSV 업로드 분석</h2>
-        <p>필수 컬럼: asset_id, hostname, port, exposure, data_sensitivity, business_criticality, legacy_flag, owner_token</p>
+        <p class="muted">필수 컬럼: <code class="mono">asset_id, hostname, port, exposure, data_sensitivity, business_criticality, legacy_flag, owner_token</code></p>
+        <p class="hint">보안 제한: 최대 <span class="mono">{{ max_upload_mb }}MB</span>, 최대 <span class="mono">{{ max_assets }}</span>개 자산, DLP 패턴 발견 시 Fail-Closed 중단</p>
       </div>
-      <form id="uploadForm">
-        <input type="file" name="asset_csv" accept=".csv" required>
-        <button type="submit">업로드 분석</button>
-      </form>
+      <div class="upload-actions">
+        <form id="uploadForm" class="upload-form">
+          <input type="file" name="asset_csv" accept=".csv" required>
+          <button type="submit" class="btn primary">업로드 분석</button>
+        </form>
+        <div class="download-actions">
+          <a class="btn secondary" href="/download/csv">CSV 다운로드</a>
+          <a class="btn secondary" href="/download/report">리포트 다운로드</a>
+          <a class="btn secondary" href="/download/manifest">증거 매니페스트</a>
+          <a class="btn secondary" href="/download/security">보안 감사 로그</a>
+        </div>
+      </div>
     </section>
 
     <section class="kpi-grid">
       <article class="kpi-card">
-        <span>전체 자산</span>
-        <strong id="totalAssets">-</strong>
+        <span class="kpi-label">전체 자산</span>
+        <strong id="totalAssets" class="kpi-value mono">-</strong>
+        <span class="kpi-foot muted">분석 대상 암호자산 수</span>
       </article>
       <article class="kpi-card">
-        <span>Critical/High</span>
-        <strong id="criticalHigh">-</strong>
+        <span class="kpi-label">Critical / High</span>
+        <strong id="criticalHigh" class="kpi-value mono">-</strong>
+        <span class="kpi-foot muted">즉시 대응 필요 자산</span>
       </article>
       <article class="kpi-card">
-        <span>평균 Q-Risk</span>
-        <strong id="avgScore">-</strong>
+        <span class="kpi-label">평균 Q-Risk 점수</span>
+        <strong id="avgScore" class="kpi-value mono">-</strong>
+        <span class="kpi-foot muted">전체 자산 평균 위험점수</span>
       </article>
       <article class="kpi-card">
-        <span>최고 위험 자산</span>
-        <strong id="topAsset">-</strong>
+        <span class="kpi-label">최고 위험 자산</span>
+        <strong id="topAsset" class="kpi-value mono">-</strong>
+        <span class="kpi-foot muted">위험점수 최상위 호스트</span>
       </article>
     </section>
 
@@ -72,23 +85,23 @@
 
     <section class="panel">
       <div class="section-head">
-        <div>
-          <h2>Top Risk Assets</h2>
-          <p>점수 상위 자산부터 정렬됩니다. 행을 클릭하면 권고문을 확인할 수 있습니다.</p>
+        <div class="section-title">
+          <h2>위험 자산 목록</h2>
+          <p class="muted">위험점수 상위 자산부터 정렬됩니다. 행을 클릭하면 하단에서 상세 권고를 확인할 수 있습니다.</p>
         </div>
-        <span id="statusBadge" class="badge">대기 중</span>
+        <span id="statusBadge" class="status-badge">대기 중</span>
       </div>
       <div class="table-wrap">
         <table>
           <thead>
             <tr>
-              <th>Asset</th>
-              <th>Hostname</th>
-              <th>Score</th>
-              <th>Level</th>
-              <th>Algorithm</th>
-              <th>Exposure</th>
-              <th>Due</th>
+              <th>자산 ID</th>
+              <th>호스트명</th>
+              <th>점수</th>
+              <th>등급</th>
+              <th>알고리즘</th>
+              <th>노출</th>
+              <th>조치 기한</th>
             </tr>
           </thead>
           <tbody id="assetTable"></tbody>
@@ -98,12 +111,12 @@
 
     <section class="panel detail-panel">
       <h2>선택 자산 상세 권고</h2>
-      <div id="assetDetail" class="detail-empty">자산 행을 선택하거나 샘플 분석을 실행하세요.</div>
+      <div id="assetDetail" class="detail-empty muted">자산 행을 선택하거나 샘플 분석을 실행하세요.</div>
     </section>
   </main>
 
   <footer>
-    Q-Shield AI MVP · Python Flask HTML Dashboard · Evidence-first final project
+    Q-Shield AI MVP · Python Flask HTML 대시보드 · 증거 중심(Evidence-first) 최종 프로젝트
   </footer>
 
   <script src="{{ url_for('static', filename='app.js') }}"></script>
