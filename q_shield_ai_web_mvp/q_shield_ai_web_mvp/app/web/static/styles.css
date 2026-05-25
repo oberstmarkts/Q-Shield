@@ -67,8 +67,8 @@ code {
 .hero {
   display: grid;
   grid-template-columns: 1.7fr .9fr;
-  gap: 2rem;
-  padding: 3rem min(6vw, 4rem) 1.5rem;
+  gap: 1.6rem;
+  padding: 2.25rem min(5vw, 3rem) 1.25rem;
   align-items: stretch;
   border-bottom: 1px solid var(--line);
   background: linear-gradient(180deg, var(--primary-soft), var(--bg));
@@ -83,41 +83,41 @@ code {
   text-transform: uppercase;
   letter-spacing: .14em;
   font-weight: 700;
-  font-size: .82rem;
-  margin: 0 0 .5rem;
+  font-size: .76rem;
+  margin: 0 0 .4rem;
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
   font-weight: 900;
   letter-spacing: -.04em;
-  line-height: 1;
+  line-height: 1.05;
   color: var(--text);
 }
 
 .subtitle {
-  margin: 1rem 0 0;
+  margin: .8rem 0 0;
   color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: .98rem;
+  line-height: 1.6;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: .65rem;
-  margin-top: 1.5rem;
+  gap: .6rem;
+  margin-top: 1.2rem;
 }
 
 /* ---------- Buttons ---------- */
 .btn {
   border: 1px solid transparent;
   border-radius: .7rem;
-  padding: .68rem 1.05rem;
+  padding: .58rem .95rem;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: .92rem;
+  font-size: .88rem;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
@@ -156,49 +156,49 @@ h1 {
   background: #ffffff;
   border: 1px solid var(--line);
   border-radius: 1rem;
-  padding: 1.35rem;
+  padding: 1.1rem;
   box-shadow: var(--shadow);
   display: grid;
-  gap: .55rem;
+  gap: .5rem;
   align-content: center;
   min-width: 0;
 }
 
 .guardrail strong {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
 }
 
 .guardrail span {
   border: 1px solid var(--line);
-  padding: .55rem .7rem;
+  padding: .48rem .65rem;
   border-radius: .6rem;
   color: var(--muted);
   background: var(--panel);
-  font-size: .9rem;
+  font-size: .85rem;
   overflow: hidden;
 }
 
 /* ---------- Layout ---------- */
 main {
-  padding: 1.5rem min(6vw, 4rem) 3rem;
+  padding: 1.25rem min(5vw, 3rem) 2.5rem;
   display: grid;
-  gap: 1.1rem;
+  gap: .9rem;
 }
 
 .panel {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 1rem;
-  padding: 1.4rem;
+  padding: 1.15rem;
   box-shadow: var(--shadow);
   min-width: 0;
 }
 
 h2 {
-  margin: 0 0 1rem;
-  font-size: 1.2rem;
+  margin: 0 0 .85rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -.02em;
   color: var(--text);
@@ -226,11 +226,24 @@ h2 {
   font-size: .9rem;
 }
 
+.upload-actions {
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  align-items: flex-start;
+}
+
 .upload-form {
   display: flex;
   gap: .65rem;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.download-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
 }
 
 input[type="file"] {
@@ -259,17 +272,17 @@ input[type="file"]::file-selector-button {
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  gap: .85rem;
 }
 
 .kpi-card {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 1rem;
-  padding: 1.25rem;
+  padding: 1rem 1.05rem;
   box-shadow: var(--shadow);
   display: grid;
-  gap: .35rem;
+  gap: .3rem;
   align-content: start;
   min-width: 0;
   position: relative;
@@ -289,11 +302,11 @@ input[type="file"]::file-selector-button {
 .kpi-label {
   color: var(--muted);
   font-weight: 700;
-  font-size: .85rem;
+  font-size: .8rem;
 }
 
 .kpi-value {
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
   font-weight: 700;
   letter-spacing: -.02em;
   color: var(--text);
@@ -302,12 +315,12 @@ input[type="file"]::file-selector-button {
 }
 
 .kpi-foot {
-  font-size: .78rem;
+  font-size: .74rem;
 }
 
 /* 최고 위험 자산: hostname이라 다른 KPI보다 한 단계 작게 (.kpi-value 최소값에 맞춤) + 긴 호스트명 강제 줄바꿈 */
 #topAsset {
-  font-size: clamp(1.15rem, 2.1vw, 1.6rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.4rem);
   line-height: 1.3;
   word-break: break-all;
   overflow-wrap: anywhere;
@@ -317,7 +330,7 @@ input[type="file"]::file-selector-button {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.1rem;
+  gap: .9rem;
 }
 
 .bar-chart {
@@ -376,7 +389,7 @@ input[type="file"]::file-selector-button {
   justify-content: space-between;
   align-items: start;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: .85rem;
   flex-wrap: wrap;
 }
 
@@ -419,7 +432,7 @@ table {
 }
 
 th, td {
-  padding: .85rem .8rem;
+  padding: .65rem .75rem;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: middle;
@@ -519,7 +532,7 @@ td.col-score strong {
 
 .detail-card {
   display: grid;
-  gap: 1.1rem;
+  gap: .9rem;
   min-width: 0;
 }
 
@@ -528,14 +541,14 @@ td.col-score strong {
   align-items: center;
   gap: .75rem;
   flex-wrap: wrap;
-  padding-bottom: .9rem;
+  padding-bottom: .75rem;
   border-bottom: 1px solid var(--line);
   min-width: 0;
 }
 
 .detail-host {
   font-family: var(--font-mono);
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
   overflow: hidden;
@@ -593,10 +606,10 @@ td.col-score strong {
   border: 1px solid var(--line);
   border-left: 3px solid var(--primary);
   border-radius: .6rem;
-  padding: .85rem 1rem;
+  padding: .7rem .9rem;
   color: var(--text);
-  font-size: .94rem;
-  line-height: 1.7;
+  font-size: .9rem;
+  line-height: 1.6;
   word-break: break-word;
   overflow: hidden;
 }
@@ -608,9 +621,9 @@ td.col-score strong {
 /* ---------- Footer ---------- */
 footer {
   color: var(--muted);
-  padding: 1.5rem min(6vw, 4rem) 2.5rem;
+  padding: 1.25rem min(5vw, 3rem) 2rem;
   border-top: 1px solid var(--line);
-  font-size: .85rem;
+  font-size: .82rem;
 }
 
 /* ---------- Responsive ---------- */
