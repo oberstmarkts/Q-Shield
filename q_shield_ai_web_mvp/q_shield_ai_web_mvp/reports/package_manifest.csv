@@ -1,51 +1,58 @@
-﻿EvidenceID,PointerID,File,Hash,Owner,TTL,DoD
-EVID-QSHIELD-PKG-001,SRC-05,.gitignore,sha256:cc6abc3b9eaa0c3a7b66ae557a311ee2afaf37fa0b2651fbdec69e9d0a68e5d1,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-009,SRC-05,README.md,sha256:d48e2f457e4cec20ead57ec3b45117a8567a9941441490c0ba724657b794ce9f,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-011,SRC-05,app/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-016,SRC-05,app/ai/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-017,SRC-05,app/ai/recommendation_engine.py,sha256:c79b1af7d5b20ecf343e1fbc05f64ce7939afa9e84e82be2a745c6b3e2ac7cb7,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-019,SRC-05,app/core/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-029,SRC-05,app/core/analyzer.py,sha256:437a7496500c5119942cf2c2ba33058d0c3b9d99ab518456963f066239ef866f,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-030,SRC-05,app/core/dlp.py,sha256:8fb66cfc1eb3b2c22a3ffcca672fa7ef3fc4656b00862998eeade36ac8634d8c,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-031,SRC-05,app/core/io_utils.py,sha256:35d64a46c142305a7c99c0eb09947b0905a10c5944e5413ed4a9e860c5ef79fe,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-032,SRC-05,app/core/models.py,sha256:fc5017d5d3008f8a7d9df61a042ef5b914473aafd5acfdc907ea1b4ec7e33d52,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-033,SRC-05,app/core/recommendation.py,sha256:964dd1def106f3ce60108ba3d5ba95cd9405275e89343312c91d16e771a3d15e,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-034,SRC-05,app/core/report.py,sha256:fb10b5d6457dfdd472249e02215dd03015fef35740a1843aabe1c7a910615e9f,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-035,SRC-05,app/core/risk.py,sha256:470b6eef9e87f47623fbd160d155400fc402ae9640bc251e2d6c8a6263fb2feb,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-037,SRC-05,app/dashboard/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-038,SRC-05,app/dashboard/streamlit_app.py,sha256:e5c4fdc2667aa88fe6c5348f20233b295a44adaf4f7cb2e3fbc1b8a9c7baf0d5,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-039,SRC-05,app/main.py,sha256:81866ebe4f4b8f4e792c7ef6562f80b997c5d2075036df084a143ac10b9f8d88,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-041,SRC-05,app/report/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-042,SRC-05,app/report/report_generator.py,sha256:550909339271043e40504cda1fd00724c71d430ee704f3c4ca7b97f16bb32c02,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-044,SRC-05,app/risk/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-045,SRC-05,app/risk/q_risk_score.py,sha256:315284485e5b34aece326820b13819962e19526f6e18e6c643556f6f26908f2b,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-047,SRC-05,app/scanner/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-052,SRC-05,app/scanner/cert_parser.py,sha256:fa2a9ea28c4db8b5a55070bc61a4aca5b939c3e261edfe2ff03e769050912725,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-053,SRC-05,app/scanner/tls_scanner.py,sha256:9326eac4337a76e3cb23a5008d305855868a48bd26c12bf5768e067b71f333df,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-055,SRC-05,app/web/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-056,SRC-05,app/web/server.py,sha256:dee86f54cb709f1bbc1cb3c384c3e9f196e6ff87b82d7c6567ae1c444b0b2f6c,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-058,SRC-05,app/web/static/app.js,sha256:2d443cd2e9c621217d56521d0372726e31ea341e51c225d636ec9df9fa4bb0fe,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-059,SRC-05,app/web/static/styles.css,sha256:4b16e79fcc82ebd02dc56fef94dfd6e8f933cc21e6b054ab4a827d5b3c93eb2a,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-061,SRC-05,app/web/templates/index.html,sha256:0d94196ffe264f67b37f58ade9fce18c9cfbd077b4b61c90bd316339792c0f6f,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-063,SRC-05,data/offline_scan_results.json,sha256:ce45b2c1fd2051298c97bda80ac721bfb72895c768f43ab2b17ab87f8a29c378,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-064,SRC-05,data/sample_assets.csv,sha256:6fa878895d3615d44442bc5d56b5a7f962dfd747d1338b99517f2f4918b1310b,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-066,SRC-05,docs/architecture.md,sha256:0ff4531d6e89e8ef4d749fa05f7745c945b9696660fdfa5646ae1870a021ab03,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-067,SRC-05,docs/demo_script.md,sha256:a86e085c91a83d0f2b863f4678d37f3a12bb125f6896ff3ed41e058faa0e2091,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-068,SRC-05,docs/package_file_tree.txt,sha256:1cfe1abd13fc536b4a387b9c37326cc68cee7527f11a84f40e59e4c92eeffecd,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-069,SRC-05,docs/q_risk_formula.md,sha256:5374ad53046399333960ef632a1f96d98dc226b7e6f5a8477f084c056dd0bb2e,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-070,SRC-05,docs/security_checklist.md,sha256:fee018b83512dbf67a46ff31984cc2beef12bc0eb2014721bda98ff8283db203,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-071,SRC-05,docs/threat_model.md,sha256:854ba9ba50c8c1ff4d386ca0877b4f7021fe4a95be166e1c210de3cfbe3b7ddf,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-073,SRC-05,reports/evidence_manifest.csv,sha256:c80f0bb5ce18f83546dc55b8cfd11ddfa27f86b02d574802a459c6e8770ba6d6,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-074,SRC-05,reports/package_manifest.csv,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-075,SRC-05,reports/q_risk_results.csv,sha256:3bac1e989ed576e92b72a5227240aeb3d66f562e811af3516a8c28833a502298,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-076,SRC-05,reports/q_risk_summary.json,sha256:a0c02154b56e10d2c92211449794047f837d5b39c83db86dc4cbacb45b404ca7,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-077,SRC-05,reports/q_shield_report.md,sha256:7e85230b01e8bc1c7a3361ea1937f87b64b55829502ae1c724745a1928275387,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-078,SRC-05,reports/test_result.md,sha256:479345164ffbb59bf554c3fd5ec537b628d32862e30f783ef5807d7499b6a788,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-079,SRC-05,requirements.txt,sha256:f75da3665a2e77f338f7e7921a2afa97ac051b6e2bbfe9f81c70b6df1ee51aad,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-080,SRC-05,run_web.py,sha256:3a5d600893430ed17c956e67bbe056f0069e1636580a9860b2fca302f8020f22,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-082,SRC-05,scripts/run_demo_unix.sh,sha256:c622c1a7b8804f09cec5f0334b0a42e1558194a1aece57747456a3bc0a1c17fc,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-083,SRC-05,scripts/run_demo_windows.bat,sha256:77197caa596d61a9fe4c3e573abf83445e6ddd002d59946e077694cf6e43b1ad,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-085,SRC-05,tests/__init__.py,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-091,SRC-05,tests/test_dlp.py,sha256:d20908caaf8e0aa665be021eb389e7648ed911c6f5243ce71294954065cc23ef,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-092,SRC-05,tests/test_offline.py,sha256:a95acb9e92f9dd2567aacdef4ff34a5d6c9e7bb7c284b9d6c85881eb4083cb45,token_24,90d,file exists and hash calculated
-EVID-QSHIELD-PKG-093,SRC-05,tests/test_risk.py,sha256:8bc02de964c50b004527c9dc0b302bf6d260e795ee742a661a978db146fcc6c1,token_24,90d,file exists and hash calculated
+﻿File,SizeBytes,Hash,Owner,TTL
+.gitignore,184,sha256:cc6abc3b9eaa0c3a7b66ae557a311ee2afaf37fa0b2651fbdec69e9d0a68e5d1,token_24,90d
+README.md,4286,sha256:1ef3e5a0e41120bb12c3dd4d66d036643c841a5090ea6e0ebbce57ad4e725b02,token_24,90d
+SECURITY_UPGRADE_REPORT.txt,7499,sha256:c08f6b7e736c99197e40f1944b6787d02f9cb9295d6d4c17561407be08d8cb64,token_24,90d
+app/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/ai/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/ai/recommendation_engine.py,243,sha256:c79b1af7d5b20ecf343e1fbc05f64ce7939afa9e84e82be2a745c6b3e2ac7cb7,token_24,90d
+app/core/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/core/analyzer.py,10848,sha256:06bdf722a062888aae065bd44e2218d223940023d1eb0c4424ab86ccb9f4fe54,token_24,90d
+app/core/dlp.py,1347,sha256:84085bdbabe7f6c0b8b250e033461c0642068359d592da4f389c45f3d94df38f,token_24,90d
+app/core/io_utils.py,3251,sha256:df5b38fdb9fef12dd187926f8297eb9ce3870dd4261d1cc0a8970a127dc4bfa3,token_24,90d
+app/core/models.py,1116,sha256:fc5017d5d3008f8a7d9df61a042ef5b914473aafd5acfdc907ea1b4ec7e33d52,token_24,90d
+app/core/recommendation.py,2988,sha256:052845e978df34341d4e950affc837a08a43357c6d5c90720fb1eecc90cd2de3,token_24,90d
+app/core/report.py,4542,sha256:2900488687a8d7a98e8b354d96965b7e01bfb7bb7de4a7832317a5940be0e416,token_24,90d
+app/core/risk.py,2400,sha256:470b6eef9e87f47623fbd160d155400fc402ae9640bc251e2d6c8a6263fb2feb,token_24,90d
+app/core/security.py,7242,sha256:43cf7a7ebe0428f36dc323aff22e10e8544946e6fc16a2bf24fff2485273509b,token_24,90d
+app/core/security_report.py,2554,sha256:9151349e66cb67c177733ec272a58ecf2bf68e95a0c7adaab97c51c6d63476fd,token_24,90d
+app/dashboard/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/dashboard/streamlit_app.py,13256,sha256:ea61dae8b2197947fff481e0b3c9d69a1395941d52cbbf7f2d05d0847d645db9,token_24,90d
+app/main.py,2629,sha256:82f1187b7a7b0f97358d2eda9fe1e715bb2eb1074ee2a8ed4b2323c17a97cdd5,token_24,90d
+app/report/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/report/report_generator.py,293,sha256:550909339271043e40504cda1fd00724c71d430ee704f3c4ca7b97f16bb32c02,token_24,90d
+app/risk/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/risk/q_risk_score.py,241,sha256:315284485e5b34aece326820b13819962e19526f6e18e6c643556f6f26908f2b,token_24,90d
+app/scanner/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/scanner/cert_parser.py,2417,sha256:fa2a9ea28c4db8b5a55070bc61a4aca5b939c3e261edfe2ff03e769050912725,token_24,90d
+app/scanner/tls_scanner.py,2025,sha256:7f5c484a4af4f5fec942aa0b8acae4f63946ad5aff399073b8575b09a7bbf4f4,token_24,90d
+app/web/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+app/web/server.py,7208,sha256:b499a0bc70138b153fffe3d6df8e977262f4c248609f1dab4640e08af643cb57,token_24,90d
+app/web/static/app.js,8448,sha256:e3453a4b4685feb1d65433dcabe79ad542f1a9184d156a6c23860515e1927552,token_24,90d
+app/web/static/styles.css,11821,sha256:8d472c2b0e5ad54fabfb04fa6829f27e29fc2d644e41564c1b6b2b9f9f011fa9,token_24,90d
+app/web/templates/index.html,5145,sha256:21d8c708ed41c4e24a2e9d27464adc2af7ee8a0590325f7a5d4832975b274ecc,token_24,90d
+data/offline_scan_results.json,1995,sha256:ce45b2c1fd2051298c97bda80ac721bfb72895c768f43ab2b17ab87f8a29c378,token_24,90d
+data/sample_assets.csv,409,sha256:6fa878895d3615d44442bc5d56b5a7f962dfd747d1338b99517f2f4918b1310b,token_24,90d
+docs/architecture.md,547,sha256:0ff4531d6e89e8ef4d749fa05f7745c945b9696660fdfa5646ae1870a021ab03,token_24,90d
+docs/demo_script.md,369,sha256:a86e085c91a83d0f2b863f4678d37f3a12bb125f6896ff3ed41e058faa0e2091,token_24,90d
+docs/package_file_tree.txt,2660,sha256:33fe1324a60b8e1491ad80d63c2666dd313b2bd03d3b62ef296c8217e71f49ea,token_24,90d
+docs/q_risk_formula.md,383,sha256:5374ad53046399333960ef632a1f96d98dc226b7e6f5a8477f084c056dd0bb2e,token_24,90d
+docs/security_checklist.md,399,sha256:fee018b83512dbf67a46ff31984cc2beef12bc0eb2014721bda98ff8283db203,token_24,90d
+docs/threat_model.md,655,sha256:854ba9ba50c8c1ff4d386ca0877b4f7021fe4a95be166e1c210de3cfbe3b7ddf,token_24,90d
+reports/evidence_manifest.csv,784,sha256:c78028015d3ae3b45fe7145a971cacd8cdd7d6e539949aae1b77c239fc776baf,token_24,90d
+reports/package_manifest.csv,6510,sha256:26c8c0a86f58f595b794f35e76b513c2594e6d70215bb84d7baa26df7df893b8,token_24,90d
+reports/q_risk_results.csv,3798,sha256:db501b772e3792f1020fb32cd1c368ec689e46ca3136eb96524300bbcedd76d6,token_24,90d
+reports/q_risk_summary.json,143,sha256:a0c02154b56e10d2c92211449794047f837d5b39c83db86dc4cbacb45b404ca7,token_24,90d
+reports/q_shield_report.md,4051,sha256:b5719bff7797775c638471847bbc72461b60ad571ffe5b46cf16004a8b1680f9,token_24,90d
+reports/security_audit_log.jsonl,5311,sha256:4aa308d2d9318606ce69e02e387267c2357461423ffe1ab9206705affc99bc91,token_24,90d
+reports/security_audit_report.md,3277,sha256:f78bc357c3fe00c178d4612308a0c574cf48f8a6fdec12a0ee846672d1072b86,token_24,90d
+reports/test_result.md,3934,sha256:1b2d25ec724375dee21dcecde4275d8fec8fd1c2f4312c8f3c011e119ab31fa4,token_24,90d
+requirements.txt,96,sha256:f75da3665a2e77f338f7e7921a2afa97ac051b6e2bbfe9f81c70b6df1ee51aad,token_24,90d
+run_web.py,142,sha256:3a5d600893430ed17c956e67bbe056f0069e1636580a9860b2fca302f8020f22,token_24,90d
+scripts/run_demo_unix.sh,170,sha256:c622c1a7b8804f09cec5f0334b0a42e1558194a1aece57747456a3bc0a1c17fc,token_24,90d
+scripts/run_demo_windows.bat,143,sha256:77197caa596d61a9fe4c3e573abf83445e6ddd002d59946e077694cf6e43b1ad,token_24,90d
+tests/__init__.py,0,sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,token_24,90d
+tests/test_dlp.py,399,sha256:d20908caaf8e0aa665be021eb389e7648ed911c6f5243ce71294954065cc23ef,token_24,90d
+tests/test_offline.py,693,sha256:a95acb9e92f9dd2567aacdef4ff34a5d6c9e7bb7c284b9d6c85881eb4083cb45,token_24,90d
+tests/test_risk.py,1445,sha256:8bc02de964c50b004527c9dc0b302bf6d260e795ee742a661a978db146fcc6c1,token_24,90d
+tests/test_score_boundaries.py,4734,sha256:c6ae75d8b33e366a9d6426c74a9e372195561548ed1342b7bfb442efd5db94fa,token_24,90d
+tests/test_security_upgrade.py,2571,sha256:9afdf10bb6fb40f5e76f0d89c7a05ebdf342c8ed67e5910c4380f2d7f4343fc7,token_24,90d

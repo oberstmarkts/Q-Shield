@@ -103,7 +103,7 @@ def render_level_chart(df: pd.DataFrame) -> None:
             "level": LEVEL_ORDER,
             "건수": [int(counts.get(level, 0)) for level in LEVEL_ORDER],
         }
-    )
+    ).reset_index(drop=True)
     max_count = max(int(chart_df["건수"].max()), 1)
     chart = (
         alt.Chart(chart_df)
@@ -130,7 +130,9 @@ def render_level_chart(df: pd.DataFrame) -> None:
 def render_algorithm_chart(df: pd.DataFrame) -> None:
     """공개키 알고리즘 분포 — 단일 색상(프라이머리) 막대 차트."""
     series = df["public_key_algorithm"].fillna("unknown").replace("", "unknown")
-    chart_df = series.value_counts().rename_axis("알고리즘").reset_index(name="건수")
+    chart_df = (
+        series.value_counts().rename_axis("알고리즘").reset_index(name="건수").reset_index(drop=True)
+    )
     max_count = max(int(chart_df["건수"].max()), 1)
     chart = (
         alt.Chart(chart_df)
