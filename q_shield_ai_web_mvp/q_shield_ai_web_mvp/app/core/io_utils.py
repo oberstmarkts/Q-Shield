@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Iterable
 
 from .models import AssetRecord, ScanResult
+from .security import assert_safe_asset_fields, sanitize_csv_row
 
 
 def parse_bool(value: object) -> bool:
@@ -20,7 +21,8 @@ def load_assets_csv(path: str | Path) -> list[AssetRecord]:
         missing = required - set(reader.fieldnames or [])
         if missing:
             raise ValueError(f"Missing required CSV columns: {', '.join(sorted(missing))}")
-        for row in reader:
+        for row_number, row in enumerate(reader, start=2):
+            assert_safe_asset_fields(row, row_number)
             records.append(
                 AssetRecord(
                     asset_id=row.get("asset_id", "").strip(),
@@ -61,7 +63,7 @@ def load_scan_results_json(path: str | Path) -> dict[str, ScanResult]:
 
 
 def write_csv_rows(path: str | Path, rows: Iterable[dict]) -> None:
-    rows = list(rows)
+    rows = [sanitize_csv_row(row) for row in list(rows)]
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     if not rows:

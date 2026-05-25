@@ -26,7 +26,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-from app.core.analyzer import results_to_rows, run_offline
+from app.core.analyzer import RiskDriftLockError, results_to_rows, run_offline
 from app.core.report import generate_markdown_report
 
 DATA_DIR = ROOT / "data"
@@ -217,6 +217,15 @@ def main() -> None:
 
     try:
         rows = load_analysis()
+    except RiskDriftLockError as exc:  # ±5% 드리프트 → 임시잠금: 리포트 생성 중단
+        st.error("⚠️ 위험 지표 급변 감지 — 리포트 생성이 임시 잠금되었습니다.")
+        for b in exc.breaches:
+            st.warning(
+                f"{b['label']}: {b['previous']} → {b['current']} "
+                f"({b['delta_pct']}% 변화, 임계값 ±{b['threshold_pct']}%)"
+            )
+        st.info("reports/q_risk_snapshot.json 의 RCA 항목을 검토한 뒤, 조치 후 해당 파일을 삭제하면 기준선이 초기화됩니다.")
+        st.stop()
     except Exception as exc:  # 데이터 소스 누락 등은 사용자에게 안내 후 중단
         st.error(f"분석을 실행할 수 없습니다: {exc.__class__.__name__}")
         st.info("data/sample_assets.csv 와 data/offline_scan_results.json 이 존재하는지 확인하세요.")
